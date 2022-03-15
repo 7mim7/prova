@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recuparação</title>
+    <link rel="stylesheet" href="recuperação.css">
+    <script src="recuperação.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Velocidade Média</h2>
+    </header>
+
+    <nav>
+        <div class="nav-item">
+            <a class="nav-item-active" href="recuperação.html">Home</a>
+        </div>
+        <div class="nav-item">
+            <a href="recuperaçãoDificil.html">Adicionar</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="letraCal">
+            <h1>Cálculo</h1>
+        </div>
+
+        <div class="corpo">
+            <div class="controles">
+                <div class="campo">
+                    <input type="number" id="des" 
+                    placeholder="Insira o valor de deslocamento">
+                </div>
+                <div class="campo">
+                    <input type="number" id="in,te" 
+                    placeholder="Insira o intervalo de tempo">
+                </div>
+           
+                <div class="botao">
+                    <button type="reset" onclick="limpar()">
+                        limpar
+                    </button>
+                </div>
+                <div class="botao">
+                    <button type="button" onclick="div()">
+                        Calcular
+                    </button>
+                </div>
+            
+                <div class="resultado">
+                    <input type="number" 
+                    id="resu" 
+                    placeholder="Resultado"
+                    readonly
+                    class="resuta">
+                </div>
+
+            </div>
+        
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="letraResu">
+            <h1>Resultados</h1>
+        </div>
+
+        <div class="resultados">
+            <input type="number" id="ress" readonly class="resuta2">
+        </div>
+
+    </div>
+
+    <script>
+
+        const div = function(){
+            let x = document.getElementById('des').value
+            let y = document.getElementById('in,te').value
+            let resultado = parseFloat(x) / parseFloat(y)
+            document.getElementById('resu').value = resultado
+        }
+
+    </script>
+
+    <br>
+    
+    <footer>
+
+        <div class="DivFooter">
+            <h2 class="CabeçaFooter">Meus Dados</h2>
+                <ul class="ListaFooter">
+                    <li class="ItemFooter">
+                        <a>SENAI SC</a>
+                    </li>
+                    <li class="ItemFoote">
+                        <a>Curso de Desenvolvimento de Sistemas</a>
+                    </li>
+                    <li class="ItemFooter">
+                        <a>Lógica de Pogramação</a>
+                    </li>
+                    <li class="IitemFooter">
+                        <a>Iasmim Pereira Da Silva</a>
+                    </li>
+                    <li class="ItemFooter">
+                        <a>15.03.2022</a>
+                    </li>
+                </ul>
+        </div>
+    
+    </footer>
+
+    <style>
+        body {
+            background-color: rgba(127, 255, 212, 0.39);
+        }
+    </style>
+
+
+</body>
+</html>
